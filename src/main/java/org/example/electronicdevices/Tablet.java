@@ -12,4 +12,32 @@ public class Tablet extends Device{
         this.batteryLife = batteryLife;
         this.processorType = processorType;
     }
+
+    public double getBatteryLife() {
+        return batteryLife;
+    }
+
+    public void setBatteryLife(double batteryLife) {
+        this.batteryLife = batteryLife;
+    }
+
+    public String getProcessorType() {
+        return processorType;
+    }
+
+    public void setProcessorType(String processorType) {
+        this.processorType = processorType;
+    }
+
+    @Override
+    public String toString() {
+        return "Tablet{" +
+                "batteryLife=" + batteryLife +
+                ", processorType='" + processorType + '\'' +
+                ", type=" + type +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", weight=" + weight +
+                '}';
+    }
 }
