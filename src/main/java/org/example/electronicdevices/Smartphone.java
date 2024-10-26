@@ -2,7 +2,7 @@ package org.example.electronicdevices;
 
 public class Smartphone extends Device {
     protected double screenSize;
-    protected double resolution;
+    protected double cameraResolution;
 
     public Smartphone() {
     }
@@ -10,10 +10,10 @@ public class Smartphone extends Device {
     public Smartphone(DeviceType type, String name, double price, double weight) {
         super(type, name, price, weight);
     }
-    public Smartphone(DeviceType type, String name, double price, double weight, double screenSize, double resolution) {
+    public Smartphone(DeviceType type, String name, double price, double weight, double screenSize, double cameraResolution) {
         super(type, name, price, weight);
         this.screenSize = screenSize;
-        this.resolution = resolution;
+        this.cameraResolution = cameraResolution;
     }
 
     public double getScreenSize() {
@@ -25,22 +25,22 @@ public class Smartphone extends Device {
     }
 
     public double getResolution() {
-        return resolution;
+        return cameraResolution;
     }
 
     public void setResolution(double resolution) {
-        this.resolution = resolution;
+        this.cameraResolution = resolution;
     }
 
     @Override
     public String toString() {
         return "Smartphone{" +
-                "screenSize=" + screenSize +
-                ", resolution=" + resolution +
-                ", type=" + type +
                 ", name='" + name + '\'' +
                 ", price=" + price +
+                ", type=" + type +
                 ", weight=" + weight +
+                "screenSize=" + screenSize +
+                ", resolution=" + cameraResolution +
                 '}';
     }
 }

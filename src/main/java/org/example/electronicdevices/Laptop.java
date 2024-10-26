@@ -3,7 +3,7 @@ package org.example.electronicdevices;
 public class Laptop extends Device {
     public Laptop() {}
     protected int ramSize;
-    protected String cameraResolution;
+    protected String processorType;
 
     public Laptop(int ramSize) {
         this.ramSize = ramSize;
@@ -12,10 +12,10 @@ public class Laptop extends Device {
     public Laptop(DeviceType type, String name, double price, double weight, int ramSize) {
         super(type, name, price, weight);
     }
-    public Laptop(DeviceType type, String name, double price, double weight, int ramSize, String cameraResolution) {
+    public Laptop(DeviceType type, String name, double price, double weight, int ramSize, String processorType) {
         super(type, name, price, weight);
         this.ramSize = ramSize;
-        this.cameraResolution = cameraResolution;
+        this.processorType = processorType;
     }
 
     public int getRamSize() {
@@ -26,22 +26,22 @@ public class Laptop extends Device {
         this.ramSize = ramSize;
     }
 
-    public String getCameraResolution() {
-        return cameraResolution;
+    public String getProcessorType() {
+        return processorType;
     }
 
-    public void setCameraResolution(String cameraResolution) {
-        this.cameraResolution = cameraResolution;
+    public void setProcessorType(String cameraResolution) {
+        this.processorType = processorType;
     }
 
     @Override
     public String toString() {
         return "Laptop{" +
-                "ramSize=" + ramSize +
-                ", cameraResolution='" + cameraResolution + '\'' +
-                ", type=" + type +
                 ", name='" + name + '\'' +
                 ", price=" + price +
+                "ramSize=" + ramSize +
+                ", cameraResolution='" + processorType + '\'' +
+                ", type=" + type +
                 ", weight=" + weight +
                 '}';
     }

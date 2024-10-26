@@ -3,14 +3,14 @@ package org.example.electronicdevices;
 public class Tablet extends Device{
     public Tablet() {}
     protected  double batteryLife;
-    protected String  processorType;
+    protected boolean hasStylus;
     public Tablet(DeviceType type, String name, double price, double weight, double batteryLife) {
         super(type, name, price, weight);
     }
-    public Tablet(DeviceType type, String name, double price, double weight, double batteryLife, String processorType) {
+    public Tablet(DeviceType type, String name, double price, double weight, double batteryLife, boolean hasStylus) {
         super(type, name, price, weight);
         this.batteryLife = batteryLife;
-        this.processorType = processorType;
+        this.hasStylus = this.hasStylus;
     }
 
     public double getBatteryLife() {
@@ -21,22 +21,22 @@ public class Tablet extends Device{
         this.batteryLife = batteryLife;
     }
 
-    public String getProcessorType() {
-        return processorType;
+    public String getHasStylus() {
+        return String.valueOf(hasStylus);
     }
 
-    public void setProcessorType(String processorType) {
-        this.processorType = processorType;
+    public void setHasStylus(String processorType) {
+        this.hasStylus = Boolean.parseBoolean(processorType);
     }
 
     @Override
     public String toString() {
         return "Tablet{" +
-                "batteryLife=" + batteryLife +
-                ", processorType='" + processorType + '\'' +
-                ", type=" + type +
                 ", name='" + name + '\'' +
                 ", price=" + price +
+                "batteryLife=" + batteryLife +
+                ", processorType='" + hasStylus + '\'' +
+                ", type=" + type +
                 ", weight=" + weight +
                 '}';
     }
