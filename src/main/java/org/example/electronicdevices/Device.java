@@ -7,14 +7,14 @@ public class Device {
     protected double weight;
 
     public Device(){}
-
+//constructor
     public Device(DeviceType type, String name, double price, double weight) {
         this.type = type;
         this.name = name;
         this.price = price;
         this.weight = weight;
     }
-
+//getter and setter methods
     public DeviceType getType() {
         return type;
     }

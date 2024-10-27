@@ -19,8 +19,8 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="324.0" prefWidth="545.0">
                <children>
-                  <Label layoutX="197.0" layoutY="29.0" text="List of choosen devices:" />
-                  <ListView fx:id="listView" layoutX="197.0" layoutY="52.0" onMouseClicked="#onListClicked" prefHeight="207.0" prefWidth="321.0" />
+                  <Label layoutX="153.0" layoutY="29.0" text="List of choosen devices:" />
+                  <ListView fx:id="listView" layoutX="153.0" layoutY="52.0" onMouseClicked="#onListClicked" prefHeight="207.0" prefWidth="388.0" />
                   <Label layoutX="29.0" layoutY="23.0" prefHeight="29.0" prefWidth="101.0" text="Choose device:" />
                   <RadioButton fx:id="rbS" layoutX="24.0" layoutY="73.0" mnemonicParsing="false" onAction="#onRbSClick" prefHeight="43.0" prefWidth="173.0" text="Smartphone" AnchorPane.bottomAnchor="214.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="73.0">
                      <toggleGroup>
@@ -30,7 +30,7 @@
                   <RadioButton fx:id="rbL" layoutX="28.0" layoutY="116.0" mnemonicParsing="false" onAction="#onRbLClick" prefHeight="39.0" prefWidth="128.0" text="Laptop" toggleGroup="$Choise" AnchorPane.leftAnchor="25.0" />
                   <RadioButton fx:id="rbT" layoutX="28.0" layoutY="162.0" mnemonicParsing="false" onAction="#onRbTClick" prefHeight="31.0" prefWidth="102.0" text="Tablet" toggleGroup="$Choise" AnchorPane.leftAnchor="25.0" />
                   <Button fx:id="removeButton" layoutX="466.0" layoutY="273.0" mnemonicParsing="false" onAction="#onRemoveClick" text="Remove" />
-                  <Label fx:id="label" layoutX="219.0" layoutY="277.0" prefHeight="17.0" prefWidth="155.0" text="Label" />
+                  <Label fx:id="label" layoutX="219.0" layoutY="277.0" prefHeight="17.0" prefWidth="155.0" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -55,12 +55,12 @@
                         <Label text="Price" GridPane.rowIndex="1" />
                         <Label text="Weight" GridPane.rowIndex="2" />
                         <Label text="Battery life" GridPane.rowIndex="3" />
-                        <Label text="Processor type" GridPane.rowIndex="4" />
+                        <Label text="Has a stylus" GridPane.rowIndex="4" />
                         <TextField fx:id="tName" prefHeight="25.0" prefWidth="153.0" GridPane.columnIndex="1" />
                         <TextField fx:id="tPrice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="tWeight" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextField fx:id="tBatteryLife" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextField fx:id="tProcessorType" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="tHasStylus" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                      </children>
                   </GridPane>
                   <Button layoutX="44.0" layoutY="258.0" mnemonicParsing="false" onAction="#onAddTabletClick" text="Add" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="245.0" />
@@ -92,16 +92,16 @@
                         <Label text="Price" GridPane.rowIndex="1" />
                         <Label text="Weight" GridPane.rowIndex="2" />
                         <Label text="Ram size" GridPane.rowIndex="3" />
-                        <Label text="Camera resolution" GridPane.rowIndex="4" />
+                        <Label text="Processor type" GridPane.rowIndex="4" />
                         <TextField fx:id="lName" GridPane.columnIndex="1" />
                         <TextField fx:id="lPrice" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="lWeight" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextField fx:id="lRamSize" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextField fx:id="lCameraResolution" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="lProcessorType" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                      </children>
                   </GridPane>
                   <Label layoutX="38.0" layoutY="29.0" text="Tablet characteristics" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0" />
-                  <Button layoutX="50.0" layoutY="245.0" mnemonicParsing="false" onAction="#onAddLaptopClick" text="Add" />
+                  <Button layoutX="50.0" layoutY="245.0" mnemonicParsing="false" onAction="#onAddLaptopClick" text="Add" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="245.0" />
                </children>
             </AnchorPane>
         </content>
@@ -137,7 +137,7 @@
                   </GridPane>
                   <Button fx:id="cancelButton" layoutX="278.0" layoutY="245.0" mnemonicParsing="false" onAction="#onCancelClick" text="Cancel" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="245.0" />
                   <Label layoutX="51.0" layoutY="31.0" text="Smartphone  characteristis" AnchorPane.bottomAnchor="285.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0" />
-                  <Button fx:id="addButton" layoutX="50.0" layoutY="245.0" mnemonicParsing="false" onAction="#onAddSmartphoneClick" text="Add" />
+                  <Button fx:id="addButton" layoutX="50.0" layoutY="245.0" mnemonicParsing="false" onAction="#onAddSmartphoneClick" text="Add" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="245.0" />
                </children></AnchorPane>
       </content>
     </Tab>

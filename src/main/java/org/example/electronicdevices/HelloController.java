@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 public class HelloController {
+//tab pane and tabs
     @FXML
     private TabPane tabPane;
     @FXML
@@ -18,15 +19,13 @@ public class HelloController {
     private Tab tabMain;
     @FXML
     private ToggleGroup Choise;
-
+//cancel button on action
     @FXML
     void onCancelClick() {
         tabPane.getSelectionModel().select(tabMain);
     }
 
-    @FXML
-    private Button removeButton;
-/*all about Smartphonee*/
+/*all about Smartphone*/
     //1.radio button
     @FXML
     private RadioButton rbS;
@@ -144,7 +143,7 @@ public class HelloController {
         tablet.setPrice(Double.parseDouble(tPrice.getText()));
         tablet.setWeight(Double.parseDouble(tWeight.getText()));
         tablet.setBatteryLife(Double.parseDouble(tBatteryLife.getText()));
-        tablet.setHasStylus(tHasStylus.getText());
+        tablet.setHasStylus(Boolean.parseBoolean(tHasStylus.getText()));
         devices.add(tablet);
         // Clear text fields after adding the Tablet
         tName.clear();
@@ -156,16 +155,17 @@ public class HelloController {
         tabPane.getSelectionModel().select(tabMain);
     }
 //all about list
-
+//1.creating list view
     @FXML
     private ListView<Device> listView;
 
     ObservableList<Device> devices = FXCollections.observableArrayList();
-
+//setting items in list
     @FXML
     public void initialize(){
         listView.setItems(devices);
     }
+//label for removed objects
     @FXML
     private Label label;
 
@@ -175,6 +175,9 @@ public class HelloController {
         label.setText(devices.get(id).toString());
 
     }
+    @FXML
+    private Button removeButton;
+    //remove button on action
     @FXML
     void onRemoveClick() {
         int id = listView.getSelectionModel().getSelectedIndex();

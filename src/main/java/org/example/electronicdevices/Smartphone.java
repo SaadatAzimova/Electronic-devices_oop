@@ -6,7 +6,7 @@ public class Smartphone extends Device {
 
     public Smartphone() {
     }
-
+//constructors
     public Smartphone(DeviceType type, String name, double price, double weight) {
         super(type, name, price, weight);
     }
@@ -15,7 +15,7 @@ public class Smartphone extends Device {
         this.screenSize = screenSize;
         this.cameraResolution = cameraResolution;
     }
-
+//getter and setter methods
     public double getScreenSize() {
         return screenSize;
     }
@@ -31,12 +31,12 @@ public class Smartphone extends Device {
     public void setResolution(double resolution) {
         this.cameraResolution = resolution;
     }
-
+//to string method
     @Override
     public String toString() {
         return "Smartphone{" +
                 ", name='" + name + '\'' +
-                ", price=" + price +
+                ", price=" + price +"$"+
                 ", type=" + type +
                 ", weight=" + weight +
                 "screenSize=" + screenSize +

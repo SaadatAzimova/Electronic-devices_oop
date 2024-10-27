@@ -8,8 +8,8 @@ public class Laptop extends Device {
     public Laptop(int ramSize) {
         this.ramSize = ramSize;
     }
-
-    public Laptop(DeviceType type, String name, double price, double weight, int ramSize) {
+//constructors
+    public Laptop(DeviceType type, String name, double price, double weight) {
         super(type, name, price, weight);
     }
     public Laptop(DeviceType type, String name, double price, double weight, int ramSize, String processorType) {
@@ -17,7 +17,7 @@ public class Laptop extends Device {
         this.ramSize = ramSize;
         this.processorType = processorType;
     }
-
+//getter and setter methods
     public int getRamSize() {
         return ramSize;
     }
@@ -30,19 +30,19 @@ public class Laptop extends Device {
         return processorType;
     }
 
-    public void setProcessorType(String cameraResolution) {
+    public void setProcessorType(String processorType) {
         this.processorType = processorType;
     }
-
+//to string method
     @Override
     public String toString() {
         return "Laptop{" +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                "ramSize=" + ramSize +
-                ", cameraResolution='" + processorType + '\'' +
-                ", type=" + type +
+                "name='" + name + '\'' +
+                ", price=" + price +"$"+
                 ", weight=" + weight +
+                ", type=" + type +
+                ", ramSize=" + ramSize +
+                ", processorType='" + processorType + '\'' +
                 '}';
     }
 }
